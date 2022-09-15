@@ -3,8 +3,10 @@ import React from 'react';
 const Inventory = () =>
 {
     return (
-        <div>
-            <h1>Мой инвентарь</h1>
+        <div className="Content">
+            <div className="CentralBlock">
+                <h1>Инвентарь</h1>
+            </div>
         </div>
     );
 };

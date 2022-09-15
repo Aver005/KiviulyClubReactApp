@@ -3,8 +3,10 @@ import React from 'react';
 const Friends = () =>
 {
     return (
-        <div>
-            <h1>Мои бро</h1>
+        <div className="Content">
+            <div className="CentralBlock">
+                <h1>Друзья</h1>
+            </div>
         </div>
     );
 };

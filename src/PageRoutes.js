@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import Friends from "./pages/Friends";
 import Library from "./pages/Library";
 import Inventory from "./pages/Inventory";
+import Auth from "./pages/Auth";
 
 const PageRoutes = () =>
 {
@@ -21,7 +22,8 @@ const PageRoutes = () =>
             {RenderPaths(["/profile", "/me"], <Profile />)}
             {RenderPaths(["/friends", "/teammates"], <Friends />)}
             {RenderPaths(["/library", "/my-games"], <Library />)}
-            {RenderPaths(["/inventory", "/my-items"], <Inventory />)}
+            {RenderPaths(["/inventory", "/items"], <Inventory />)}
+            {RenderPaths(["/auth"], <Auth />)}
         </Routes>
     );
 };

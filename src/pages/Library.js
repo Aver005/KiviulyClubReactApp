@@ -3,8 +3,10 @@ import React from 'react';
 const Library = () =>
 {
     return (
-        <div>
-            <h1>Мои игры</h1>
+        <div className="Content">
+            <div className="CentralBlock">
+                <h1>Библиотека</h1>
+            </div>
         </div>
     );
 };

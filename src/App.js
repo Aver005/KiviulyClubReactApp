@@ -6,7 +6,7 @@ import './style/App.css';
 /*
     Models
 */
-import Header from "./models/Header/Header";
+import Header from "./components/Header/Header";
 
 
 /*
