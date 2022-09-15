@@ -1,0 +1,55 @@
+@import "Fonts.css";
+
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Leto', serif;
+    font-size: 2.5vh;
+}
+
+body
+{
+    background-color: #202128;
+}
+
+.Header
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    color: #5ca7d6;
+    background-color: #16161a;
+}
+
+.Header img
+{
+    width: calc(16vh - 4vw);
+    margin: 4vh;
+}
+
+.Header ul
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto 0 4vh;
+}
+
+.Header li
+{
+    margin: 2vh;
+}
+
+.Header a
+{
+    color: #60a2ff;
+}
