@@ -1,0 +1,36 @@
+.Loading
+{
+    width: 10vh;
+    height: 10vh;
+    background-color: #2d5bbe;
+    border-radius: 3vh;
+    margin: 4vh auto;
+    animation: Loading 1s infinite;
+    border: solid 0.25vh #2d5bbe;
+}
+
+@keyframes Loading
+{
+    0%, 100%
+    {
+        transform: scale(0.5);
+        transform: rotate(0);
+        border-radius: 4vh;
+        border-color: #2d5bbe;
+        background-color: #2d5bbe;
+    }
+
+    60%
+    {
+        transform: scale(1);
+        transform: rotate(45deg);
+        border-radius: 1vh;
+        border-color: #999;
+        background-color: #214378;
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}

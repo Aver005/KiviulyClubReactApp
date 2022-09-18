@@ -1,4 +1,5 @@
 @import "Fonts.css";
+@import "Animations.css";
 
 *
 {
@@ -20,20 +21,18 @@ body
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
     justify-content: center;
     align-items: flex-start;
     color: #5ca7d6;
     background-color: #16161a;
-    padding-bottom: 4vh;
-    max-height: calc(36vh - 13vw);
-    min-height: 10vh;
+    min-height: 16vh;
 }
 
 .Header img
 {
     width: calc(16vh - 4vw);
-    margin: 4vh;
+    margin: auto 4vh;
 }
 
 .Header ul
@@ -67,9 +66,53 @@ body
 {
     background-color: #202128;
     border-radius: 1vh;
+    cursor: pointer;
 
     transition: background-color 0.5s,
                 border-radius 0.5s;
+}
+
+.MiniProfile
+{
+    text-align: center;
+    margin: 2vh;
+    padding: 2vh;
+    border-radius: 2vh;
+    transition: background-color 0.5s;
+}
+
+.MiniProfile:hover
+{
+    cursor: pointer;
+    background-color: #202128;
+    transition: background-color 0.25s;
+}
+
+.MiniProfile img
+{
+    border-radius: 2vh;
+    margin: 1vh;
+}
+
+.MiniProfile h2
+{
+
+}
+
+.MiniProfile a
+{
+    font-size: 2vh;
+    padding: 0;
+}
+
+.MiniProfile p
+{
+
+}
+
+.MiniProfile button
+{
+
 }
 
 .Content
@@ -81,7 +124,7 @@ body
     justify-content: space-around;
     align-items: center;
     width: 80vw;
-    margin: 5vh auto;
+    margin: 2vh auto;
 }
 
 .Content button
@@ -119,6 +162,7 @@ body
 .Content img
 {
     width: 34vh;
+    border-radius: 2vh;
 }
 
 .Content input
@@ -129,12 +173,38 @@ body
     color: #eee;
     padding: 1vh 3vh;
     margin: 1vh;
+    transition: background-color 0.5s, border-radius 0.5s;
+}
+
+.Content input[type="text"],
+.Content input[type="password"],
+.Content input[type="email"],
+.Content input[type="tel"]
+{
+    min-width: 25vh;
+    text-align: center;
+}
+
+.Content input:hover
+{
+    background-color: #0f0f14;
+    border-radius: 1.5vh;
+    transition: background-color 0.5s, border-radius 0.5s;
 }
 
 .Content input[type="submit"],
 .Content input[type="button"]
 {
+    transition: background-color 0.5s, border-radius 0.5s;
+}
 
+.Content input[type="submit"]:hover,
+.Content input[type="button"]:hover
+{
+    cursor: pointer;
+    background-color: #214378;
+    border-radius: 1.5vh;
+    transition: background-color 0.5s, border-radius 0.5s;
 }
 
 .CentralBlock
@@ -160,4 +230,15 @@ body
 {
     color: #b1b1b1;
     padding: 3vh 0 1.5vh;
+}
+
+.AuthBlock a
+{
+    color: #60a2ff;
+}
+
+.RedButton
+{
+    background-color: #4f0c0c !important;
+    color: #d19292 !important;
 }

@@ -1,8 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, {createContext} from "react";
+import {createRoot} from "react-dom/client";
 import App from "./App";
+import User from "./models/User";
 
-ReactDOM.render(
-    <App />,
-    document.getElementById("root")
+export const Context = createContext(null);
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
+    <Context.Provider value={{user: new User()}}>
+        <App />
+    </Context.Provider>
 );

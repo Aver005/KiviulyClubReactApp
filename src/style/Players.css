@@ -1,0 +1,74 @@
+.FindUsersBlock
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+    padding: 3vh;
+    background-color: #25262f;
+    border-radius: 4vh;
+    text-align: center;
+    min-width: 56%;
+}
+
+.FindUsersBlock h2
+{
+    width: 100%;
+    font-size: 4vh;
+    color: #999;
+    margin-bottom: 2vh;
+}
+
+.SmallUserBlock
+{
+    width: 18vh;
+    height: 24vh;
+    padding: 0.2vh;
+    margin: 2vh;
+    background-color: #202128;
+    border-radius: 2vh;
+    transition: background-color 0.5s;
+}
+
+.SmallUserBlock:hover
+{
+    background-color: #13131c;
+    transition: background-color 0.25s;
+}
+
+.SmallUserBlock p
+{
+    font-size: 2vh;
+    color: #5b96dc;
+}
+
+.SmallUserBlock img
+{
+    width: 18vh;
+    height: 18vh;
+    border-radius: 2vh;
+    margin-bottom: 1vh;
+    transition: transform 0.5s;
+}
+
+.SmallUserBlock img:hover
+{
+    transform: scale(1.05);
+    transition: transform 0.25s;
+}
+
+.FindUsersBlock p
+{
+    width: 100%;
+    font-size: 2.5vh;
+    color: #b7c2d9;
+}
+
+.LineButtons
+{
+    width: 100%;
+    height: 8vh;
+}

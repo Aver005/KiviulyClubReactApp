@@ -1,31 +1,26 @@
-import React from 'react';
-import {Routes, Route} from "react-router-dom";
+import React, {useContext} from 'react';
+import {Routes, Route, Navigate} from "react-router-dom";
+import {AUTH_ROUTES, PUBLIC_ROUTES} from "./utils/Constants";
+import {Context} from "./index";
+import {observer} from "mobx-react-lite";
 
-/*
-    Pages
-*/
-import Feed from "./pages/Feed";
-import Profile from "./pages/Profile";
-import Friends from "./pages/Friends";
-import Library from "./pages/Library";
-import Inventory from "./pages/Inventory";
-import Auth from "./pages/Auth";
-
-const PageRoutes = () =>
+const PageRoutes = observer(() =>
 {
-    const RenderPaths = (paths, element) =>
-        paths.map((path) => <Route key={path} path={path} element={element} />);
+    const {user} = useContext(Context);
 
     return (
         <Routes>
-            {RenderPaths(["*", "/", "/news", "/feed"], <Feed />)}
-            {RenderPaths(["/profile", "/me"], <Profile />)}
-            {RenderPaths(["/friends", "/teammates"], <Friends />)}
-            {RenderPaths(["/library", "/my-games"], <Library />)}
-            {RenderPaths(["/inventory", "/items"], <Inventory />)}
-            {RenderPaths(["/auth"], <Auth />)}
+            {user.isAuth && AUTH_ROUTES.map(({paths, page}) =>
+                paths.map((path) => <Route key={path} path={path} element={page}/>)
+            )}
+
+            {PUBLIC_ROUTES.map(({paths, page}) =>
+                paths.map((path) => <Route key={path} path={path} element={page}/>)
+            )}
+
+            <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
     );
-};
+});
 
 export default PageRoutes;
